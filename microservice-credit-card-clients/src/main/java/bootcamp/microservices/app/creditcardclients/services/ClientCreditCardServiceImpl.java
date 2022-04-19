@@ -63,4 +63,10 @@ public class ClientCreditCardServiceImpl implements ClientCreditCardService {
 		}).switchIfEmpty(Mono.error(new CustomNotFoundException("ClientCreditCard not found")));
 	}
 
+	@Override
+	public Mono<ClientCreditCard> findByIdClient(String idClient) {
+		return clientCreditCardRepository.findByIdClient(idClient)
+				.switchIfEmpty(Mono.error(new CustomNotFoundException("ClientCreditCard not found")));
+	}
+
 }

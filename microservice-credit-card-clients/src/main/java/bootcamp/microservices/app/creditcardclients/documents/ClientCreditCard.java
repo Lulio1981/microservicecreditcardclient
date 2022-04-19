@@ -15,7 +15,7 @@ public class ClientCreditCard {
 
 	private String creditCardNumber;
 
-	private Client client;
+	private String idClient;
 
 	private Double creditLine;
 
