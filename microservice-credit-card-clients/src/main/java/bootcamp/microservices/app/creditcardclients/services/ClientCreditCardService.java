@@ -18,6 +18,6 @@ public interface ClientCreditCardService {
 
 	public Mono<ClientCreditCard> deleteLogic(ClientCreditCard clientCreditCard);
 
-	public Mono<ClientCreditCard> findByIdClient(String id);
+	public Mono<ClientCreditCard> findByIdClient(String idClient);
 
 }

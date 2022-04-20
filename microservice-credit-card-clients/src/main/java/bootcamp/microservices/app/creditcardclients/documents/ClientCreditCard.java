@@ -1,5 +1,6 @@
 package bootcamp.microservices.app.creditcardclients.documents;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -7,9 +8,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.Data;
+
 @Data
 @Document
-public class ClientCreditCard {
+public class ClientCreditCard implements Serializable {
+
+	private static final long serialVersionUID = 352307200894856783L;
 
 	private String id;
 
@@ -22,9 +26,9 @@ public class ClientCreditCard {
 	private Date expeditionDate;
 
 	private Date expirationDate;
-	
+
 	private Date deadline;
-	
+
 	private Date paymentDate;
 
 	private Double interestRate;

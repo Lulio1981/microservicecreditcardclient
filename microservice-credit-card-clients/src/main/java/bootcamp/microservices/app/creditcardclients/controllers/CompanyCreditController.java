@@ -49,6 +49,6 @@ public class CompanyCreditController {
 
 	@GetMapping("/idClient/{idClient}")
 	public Mono<ClientCreditCard> searchByIdClient(@PathVariable String idClient) {
-		return clientCreditCardService.findById(idClient);
+		return clientCreditCardService.findByIdClient(idClient);
 	}
 }
